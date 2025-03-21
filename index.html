@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ampire - Quotation for Akkenna</title>
+    <style>
+        :root {
+            --dark-blue: #1a1d2a;
+            --light-gray: #f5f7fb;
+            --text-gray: #4B5563;
+            --primary-blue: #3B82F6;
+            --success-green: #10b981;
+            --border-gray: #e5e7eb;
+            --lightbg: #F9FAFB;
+            --softblue: #E0F2FE;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: var(--light-gray);
+        }
+        
+        .sidebar {
+            width: 500px;
+            background-color: var(--dark-blue);
+            padding: 60px 40px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .sidebar-header {
+            margin-top: auto;
+        }
+        
+        .sidebar-header .quote-for {
+            color: #6c8ffc;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar-header .company-name {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar-header .date {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 60px;
+            overflow-y: auto;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .brief {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        
+        .company-highlight {
+            font-weight: bold;
+        }
+        
+        .details-grid {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .details-card {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1;
+        }
+        
+        .details-card-label {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        .details-card-value {
+            font-size: 14px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .feature-item {
+            background-color: var(--softblue);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-item:before {
+            content: "•";
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .list-item {
+            background-color: var(--lightbg);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .list-item:before {
+            content: "•";
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .scope-note {
+            background-color: var(--lightbg);
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 1.6;
+            color: var(--text-gray);
+        }
+        
+        .logo-section {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-gray);
+        }
+        
+        .company-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .company-tagline {
+            font-style: italic;
+            color: var(--text-gray);
+        }
+        
+        .header {
+            margin-bottom: 30px;
+        }
+        
+        .company-title {
+            font-size: 46px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .project-info {
+            color: var(--text-gray);
+            margin-bottom: 5px;
+        }
+        
+        .total-quote {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #ccc;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        .name {
+            font-size: 14px;
+            font-style: italic;
+            color: #ccc;
+        }
+        
+        .timeline-section {
+            margin-top: 20px;
+        }
+        
+        .timeline-cards {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="user-info">
+            <div class="user-avatar"></div>
+            <div class="name">ampire</div>
+        </div>
+        <div class="sidebar-header">
+            <div class="quote-for">Quotation for</div>
+            <div class="company-name">Akkenna</div>
+            <div class="date">— Education Training Platform</div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="header">
+            <div class="company-title">ampire</div>
+            <div class="project-info">Quotation for Akkenna</div>
+            <div class="project-info">Project: Education Training Platform</div>
+            <div class="total-quote">Total Quote: ₹3,80,000</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Overview</div>
+            <div class="brief">
+                A complete full-stack solution tailored for digital education delivery — integrating seamless content management, 
+                scalable backend architecture, secure access control, and a rich, intuitive web experience.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Project Timeline</div>
+            <div class="timeline-cards">
+                <div class="details-card">
+                    <div class="details-card-label">Project Duration</div>
+                    <div class="details-card-value">50-60 Days</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">What This Includes</div>
+            <div>
+                <div class="list-item">Fully responsive web UI using React.js</div>
+                <div class="list-item">Backend architecture: user auth, course logic, APIs</div>
+                <div class="list-item">Internal admin dashboard for managing courses, users, and client controls</div>
+                <div class="list-item">Subscription & payment system (Razorpay, UPI)</div>
+                <div class="list-item">API layer for integration with Akkenna's mobile frontend</div>
+                <div class="list-item">Secure deployment & production-ready setup</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Core Features</div>
+            <div class="feature-grid">
+                <div class="feature-item">HD video playback with subtitles</div>
+                <div class="feature-item">Resume video functionality</div>
+                <div class="feature-item">Interactive quizzes with scoring</div>
+                <div class="feature-item">Certificate auto-generation</div>
+                <div class="feature-item">Role-based CMS</div>
+                <div class="feature-item">Custom anti-copy protection</div>
+                <div class="feature-item">LMS tagging support</div>
+                <div class="feature-item">Social snippet sharing</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Client Responsibilities</div>
+            <div>
+                <div class="list-item">Provide finalized certificate template (PDF/Design)</div>
+                <div class="list-item">Provision headless CMS if preferred (e.g., Contentful, Strapi)</div>
+                <div class="list-item">Handle UI for the mobile application (built by Akkenna team)</div>
+                <div class="list-item">Cover any third-party tools or API costs (e.g., subtitle services, CDN)</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Scope Flexibility</div>
+            <div class="scope-note">
+                If additional features, integrations, or developer resources are requested during the project lifecycle, 
+                the final quotation may be revised accordingly based on complexity and impact.
+            </div>
+        </div>
+        
+        <div class="logo-section">
+            <div class="company-logo">ampire</div>
+            <div class="company-tagline">Innovating Digital Experiences</div>
+        </div>
+    </div>
+</body>
+</html>
