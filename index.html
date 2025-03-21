@@ -25,34 +25,77 @@
         
         body {
             display: flex;
-            height: 100vh;
+            flex-direction: column;
+            min-height: 100vh;
             background-color: var(--light-gray);
         }
         
+        /* Make layout responsive */
+        @media (min-width: 768px) {
+            body {
+                flex-direction: row;
+                height: 100vh;
+            }
+        }
+        
         .sidebar {
-            width: 500px;
+            width: 100%;
             background-color: var(--dark-blue);
-            padding: 60px 40px;
+            padding: 30px 20px;
             color: white;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
         
+        @media (min-width: 768px) {
+            .sidebar {
+                width: 350px;
+                padding: 60px 40px;
+                height: 100vh;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .sidebar {
+                width: 500px;
+            }
+        }
+        
         .sidebar-header {
-            margin-top: auto;
+            margin-top: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .sidebar-header {
+                margin-top: auto;
+            }
         }
         
         .sidebar-header .quote-for {
             color: #6c8ffc;
-            font-size: 18px;
-            margin-bottom: 10px;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        @media (min-width: 768px) {
+            .sidebar-header .quote-for {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
         }
         
         .sidebar-header .company-name {
-            font-size: 42px;
+            font-size: 32px;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+        }
+        
+        @media (min-width: 768px) {
+            .sidebar-header .company-name {
+                font-size: 42px;
+                margin-bottom: 10px;
+            }
         }
         
         .sidebar-header .date {
@@ -62,23 +105,55 @@
         
         .content {
             flex: 1;
-            padding: 60px;
+            padding: 30px 20px;
             overflow-y: auto;
         }
         
+        @media (min-width: 768px) {
+            .content {
+                padding: 40px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .content {
+                padding: 60px;
+            }
+        }
+        
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .section {
+                margin-bottom: 40px;
+            }
         }
         
         .section-title {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
         }
         
         .brief {
             color: var(--text-gray);
             line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        @media (min-width: 768px) {
+            .brief {
+                font-size: 16px;
+            }
         }
         
         .company-highlight {
@@ -87,8 +162,16 @@
         
         .details-grid {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             margin-top: 15px;
+            flex-direction: column;
+        }
+        
+        @media (min-width: 640px) {
+            .details-grid {
+                flex-direction: row;
+                gap: 20px;
+            }
         }
         
         .details-card {
@@ -101,7 +184,7 @@
         
         .details-card-label {
             font-size: 12px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .details-card-value {
@@ -110,9 +193,15 @@
         
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
             gap: 10px;
             margin-top: 10px;
+        }
+        
+        @media (min-width: 640px) {
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         .feature-item {
@@ -121,6 +210,13 @@
             border-radius: 8px;
             display: flex;
             align-items: center;
+            font-size: 14px;
+        }
+        
+        @media (min-width: 768px) {
+            .feature-item {
+                font-size: 16px;
+            }
         }
         
         .feature-item:before {
@@ -128,6 +224,7 @@
             color: var(--primary-blue);
             font-weight: bold;
             margin-right: 10px;
+            flex-shrink: 0;
         }
         
         .list-item {
@@ -136,7 +233,14 @@
             border-radius: 8px;
             margin-bottom: 10px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            font-size: 14px;
+        }
+        
+        @media (min-width: 768px) {
+            .list-item {
+                font-size: 16px;
+            }
         }
         
         .list-item:before {
@@ -144,61 +248,116 @@
             color: var(--primary-blue);
             font-weight: bold;
             margin-right: 10px;
+            flex-shrink: 0;
         }
         
         .scope-note {
             background-color: var(--lightbg);
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             line-height: 1.6;
             color: var(--text-gray);
+            font-size: 14px;
+        }
+        
+        @media (min-width: 768px) {
+            .scope-note {
+                padding: 20px;
+                font-size: 16px;
+            }
         }
         
         .logo-section {
-            margin-top: 60px;
+            margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid var(--border-gray);
         }
         
+        @media (min-width: 768px) {
+            .logo-section {
+                margin-top: 60px;
+            }
+        }
+        
         .company-logo {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             margin-bottom: 5px;
+        }
+        
+        @media (min-width: 768px) {
+            .company-logo {
+                font-size: 24px;
+            }
         }
         
         .company-tagline {
             font-style: italic;
             color: var(--text-gray);
+            font-size: 14px;
         }
         
         .header {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+        }
+        
+        @media (min-width: 768px) {
+            .header {
+                margin-bottom: 30px;
+            }
         }
         
         .company-title {
-            font-size: 46px;
+            font-size: 36px;
             font-weight: bold;
             margin-bottom: 5px;
+        }
+        
+        @media (min-width: 768px) {
+            .company-title {
+                font-size: 46px;
+            }
         }
         
         .project-info {
             color: var(--text-gray);
             margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        @media (min-width: 768px) {
+            .project-info {
+                font-size: 16px;
+            }
         }
         
         .total-quote {
             font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
             margin-top: 10px;
         }
         
+        @media (min-width: 768px) {
+            .total-quote {
+                font-size: 18px;
+            }
+        }
+        
         .user-avatar {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             background-color: #ccc;
             border-radius: 50%;
             overflow: hidden;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+        }
+        
+        @media (min-width: 768px) {
+            .user-avatar {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 15px;
+            }
         }
         
         .name {
@@ -213,8 +372,16 @@
         
         .timeline-cards {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             margin-top: 15px;
+            flex-direction: column;
+        }
+        
+        @media (min-width: 640px) {
+            .timeline-cards {
+                flex-direction: row;
+                gap: 20px;
+            }
         }
     </style>
 </head>
